@@ -1,5 +1,9 @@
-WIP Code for a Wasserstein GAN (WGAN). 
-It uses Wasserstein Distance  - uses a critic-generator architecture and measures dstance between distributions
-![image](https://github.com/One-eyed-warrior/Abstract-Art-WGAN/assets/75874625/b3c366b2-9434-4f19-8ff2-d442d2e40df3)
+Code for a Wasserstein GAN (WGAN) implemented over an [abstract art images dataset](https://www.kaggle.com/datasets/bryanb/abstract-art-gallery) 
 
-(Can't really work rn since i dont have computer to work on lol)
+It uses Wasserstein Distance (basically measures distance between distributions)
+
+![image](https://github.com/user-attachments/assets/455a2008-17d5-4395-ab64-2fbde7d65322)
+
+
+RESULTS:
+
