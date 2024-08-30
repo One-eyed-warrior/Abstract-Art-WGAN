@@ -31,7 +31,7 @@ class Generator(nn.Module):
 # Load the trained generator model
 device = torch.device('cpu')  # Change to 'cuda' if you want to load on GPU
 generator = Generator()
-generator.load_state_dict(torch.load('g.pth', map_location=device))
+generator.load_state_dict(torch.load('G.pth', map_location=device))
 generator.eval()
 
 st.set_page_config(page_title="Image Generator", layout="wide")
