@@ -4,7 +4,6 @@ import numpy as np
 from PIL import Image
 import torch.nn as nn
 
-# Define the Generator model architecture
 class Generator(nn.Module):
     def __init__(self):
         super(Generator, self).__init__()
@@ -28,8 +27,8 @@ class Generator(nn.Module):
     def forward(self, input):
         return self.main(input)
 
-# Load the trained generator model
-device = torch.device('cpu')  # Change to 'cuda' if you want to load on GPU
+
+device = torch.device('cpu')  # because cuda gpu apparently doesn't work with streamlit, eh what can you do
 generator = Generator()
 generator.load_state_dict(torch.load('G.pth', map_location=device))
 generator.eval()
@@ -40,19 +39,19 @@ st.title("Abstract Art Generator")
 st.write("Press the button below to generate an image.")
 
 if st.button("Generate Image"):
-    # Generate a random noise vector and reshape it to (1, 100, 1, 1)
-    noise = torch.randn(1, 100, 1, 1)  # Batch size of 1, 100 channels, height and width of 1
+   
+    noise = torch.randn(1, 100, 1, 1) 
 
-    # Generate an image using the loaded generator model
-    with torch.no_grad():  # Disable gradient calculation for inference
+    
+    with torch.no_grad():  
         generated_image = generator(noise)
 
-    # Convert the generated image tensor to a displayable format
-    generated_image = generated_image.squeeze().permute(1, 2, 0)  # Change shape to (H, W, C)
-    generated_image = (generated_image + 1) / 2.0  # Normalize to [0, 1]
-    generated_image = (generated_image * 255).numpy().astype(np.uint8)  # Scale to [0, 255]
+   
+    generated_image = generated_image.squeeze().permute(1, 2, 0)  
+    generated_image = (generated_image + 1) / 2.0  
+    generated_image = (generated_image * 255).numpy().astype(np.uint8)  
 
-    # Create a PIL image
+    
     pil_image = Image.fromarray(generated_image)
-    display_width = 150  # Set this to the desired width for zoomed-out display
+    display_width = 150 
     st.image(pil_image, width=display_width)
