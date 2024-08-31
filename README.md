@@ -1,5 +1,6 @@
 Code for a Wasserstein GAN (WGAN) implemented over an [abstract art images dataset](https://www.kaggle.com/datasets/bryanb/abstract-art-gallery) 
 
+
 It uses Wasserstein Distance (basically measures distance between distributions)
 
 ![image](https://github.com/user-attachments/assets/455a2008-17d5-4395-ab64-2fbde7d65322)
@@ -34,5 +35,5 @@ Final stages (400-500 epochs)(convergence):
 ![epoch_500_batch_final](https://github.com/user-attachments/assets/f9f279a3-72c4-44b5-87c8-9aa63984d9ec)
 
 
-
+(IDK why the streamlit deployment hasn't updated with the new commits)
 
