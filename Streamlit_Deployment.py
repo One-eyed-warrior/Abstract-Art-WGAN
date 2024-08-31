@@ -36,7 +36,7 @@ generator.eval()
 
 st.set_page_config(page_title="Image Generator", layout="wide")
 
-st.title("Image Generator")
+st.title("Abstract Art Generator")
 st.write("Press the button below to generate an image.")
 
 if st.button("Generate Image"):
@@ -54,6 +54,5 @@ if st.button("Generate Image"):
 
     # Create a PIL image
     pil_image = Image.fromarray(generated_image)
-
-    # Display the generated image
-    st.image(pil_image, use_column_width=True)
+    display_width = 150  # Set this to the desired width for zoomed-out display
+    st.image(pil_image, width=display_width)
