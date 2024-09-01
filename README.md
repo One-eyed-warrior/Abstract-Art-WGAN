@@ -35,5 +35,4 @@ Final stages (400-500 epochs)(convergence):
 ![epoch_500_batch_final](https://github.com/user-attachments/assets/f9f279a3-72c4-44b5-87c8-9aa63984d9ec)
 
 
-(IDK why the streamlit deployment hasn't updated with the new commits)
-
+Attached Streamlit deployment for your viewing
